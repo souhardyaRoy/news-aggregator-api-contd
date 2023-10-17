@@ -64,7 +64,7 @@ const getPref =  (req, res) => {
         return res.status(200).json(userPrefs[0].newPrefs);
       }
     }
-    return res.status(404).json({ message: 'Preferences not found' });
+    return res.status(404).send({ message: 'Preferences not found' });
   } catch (error) {
     return res.status(500).send(error);
   }
